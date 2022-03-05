@@ -9,6 +9,10 @@
   "author": "Vadim Losenkov <vprog0729@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "carousel": "^0.0.3",
+    "normalize.css": "^8.0.1",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.0.7"
   }
 }

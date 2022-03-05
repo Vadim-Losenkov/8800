@@ -19,21 +19,24 @@ button {
 
 body {
   // min-width: 320px;
-  min-width: 1920px;
+  // min-width: 1920px;
   overflow-x: hidden;
   min-height: 100vh;
   @extend %fbook;
   font-size: 22px;
   line-height: 25px;
-  color: #3B3643;
+  color: #3b3643;
+  font-family: 'FuturaBookC';
+  font-weight: normal;
+  font-style: normal;
 }
 
 .title {
-  font-family: Gotham Pro;
+  font-family: 'Gotham Pro';
   font-weight: bold;
   font-size: 40px;
   line-height: 135%;
-  color: #3B3643;
+  color: #3b3643;
   span {
     color: $red;
   }
