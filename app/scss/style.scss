@@ -108,7 +108,7 @@
     padding: 24px 0;
     position: relative;
     &.active::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -352,9 +352,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/global/benefits-bg.svg');
-  
+
   &__inner {
-    
   }
   &__title {
     margin-bottom: 60px;
@@ -376,5 +375,120 @@
   }
 }
 
+.number {
+  padding-top: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/global/number-bg.jpg');
+  position: relative;
+  &__innner {
+  }
+  &__info-box {
+    margin-left: 130px;
+    // transform: translateY(-100px);
+    transform: translateY(-274px);
+  }
+  &__window {
+    width: 647px;
+    height: 152px;
+    border: 5px solid rgba(102, 103, 171, 0.15);
+    box-sizing: border-box;
+    box-shadow: 10px 25px 125px -20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      width: 45px;
+      height: 45px;
+      transform: translateY(-50%);
+    }
+  }
+  &__phone {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 53px;
+    margin-bottom: 106px;
+
+    span {
+      color: $red;
+    }
+
+    &.old {
+      display: inline-block;
+      margin-bottom: 118px;
+      font-family: Gotham Pro;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 53px;
+      color: #3b3643;
+      opacity: 0.2;
+      position: relative;
+      padding: 0 16px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 7px;
+        background-color: #3b3643;
+      }
+    }
+  }
+  &__info {
+    transform: translateY(180px);
+    max-width: 650px;
+  }
+  &__images {
+    .number-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      // 310
+      // 75
+      &-1 {
+        z-index: 5;
+        r
+      }
+      &-2 {
+z-index: 4;
+      }
+      &-3 {
+z-index: 3;
+      }
+    }
+  }
+  &__info-title {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 34px;
+    text-align: right;
+    color: $red;
+    margin-bottom: 30px;
+    margin-right: 80px;
+  }
+  &__info-text {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 24px;
+    text-align: right;
+    color: #898492;
+    margin-left: -40px;
+    margin-right: 80px;
+  }
+}
 
 @import 'media';
