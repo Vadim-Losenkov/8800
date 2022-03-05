@@ -4,14 +4,222 @@
 @import "global";
 @import "libs";
 
+.header {
+  box-shadow: 0px 4px 30px 0px #0000000D;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  &__top {
+    padding: 15px 0;
+    border-bottom: 1px solid  #ddd;
+  }
+  &__top-inner {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  &__contacts {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+  }
+  &__contacts-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    position: relative;
+    &.icon {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../images/icons/phone.svg');
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  &__contacts-name {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #777777;
+    margin-bottom: 5px;
+  }
+  &__contacts-phone {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 17px;
+    color: #3B3643;
+  }
+  
+  &__links {
+    display: flex;
+    column-gap: 40px;
+  }
+  &__links-link {
+    @extend %fbook;
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    color: #3B3643;
+    
+    &.icon {
+      &::before {
+        content: "";
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 30px;
+        top: -40%;
+        height: 30px;
+        background-image: url('../images/icons/user.svg');
+        left: -25px;
+      }
+    }
+  }
+  &__content-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    padding: 24px 0;
+    
+    a {
+      font-size: 16px;
+      line-height: 18px;
+      color: #3B3643;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+  &__search {
+    padding-left: 27px;
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 17px;
+      height: 17px;
+      background-image: url('../images/icons/search.svg');
+      left: 0px;
+    }
+  }
+}
 
+.top {
+  margin-bottom: 150px;
+  padding-top: 262px;
+  padding-bottom: 52px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/global/top-bg.jpg');
+  &__inner {
+    max-width: 900px;
+  }
+  &__suptitle {
+    @extend %fbook;
+    font-size: 16px;
+    line-height: 18px;
+    color: #777777;
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    margin-bottom: 40px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+    margin-bottom: 70px;
+  }
+  &__buttons-btn {
+    background: #3B3643;
+    border-radius: 7px;
+    padding: 19px 32px;
 
-
-
-
-
-
-
+    @extend %fdemi;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  &__buttons-link {
+    @extend %fbook;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #3B3643;
+    padding-left: 34px;
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../images/icons/layers.svg');
+      left: 0px;
+    }
+  }
+  &__benefits {
+    display: flex;
+    column-gap: 40px;
+  }
+  &__benefits-item {
+    padding: 40px 31px;
+    width: 220px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 10px 25px 125px -20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+  }
+  &__benefits-title {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    color: #3B3643;
+    margin-bottom: 10px;
+    
+    span {
+      font-size: 18px;
+      line-height: 17px;
+    }
+  }
+  &__benefits-text {
+    @extend %fbook;
+    font-size: 18px;
+    line-height: 20px;
+    color: #3B3643;
+  }
+}
 
 
 @import "media";
