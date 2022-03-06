@@ -8,6 +8,14 @@ $(function () {
     dots: true,
     appendDots: $('.slider__dots'),
     autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          vertical: false,
+        },
+      },
+    ],
   });
 
   $('.number__window').on('click', function (e) {
@@ -59,7 +67,7 @@ $(function () {
     function checkPosition() {
       const position = Math.round(pageYOffset) + windowHeight;
       console.log(position - numberPosition);
-      if (position - numberPosition > 700) {
+      if (position - numberPosition > 500) {
         setTimeout(() => {
           animateNumber();
         }, 100);
