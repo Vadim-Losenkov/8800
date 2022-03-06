@@ -212,6 +212,13 @@
 
 @media (max-width: 768px) {
   .top {
+    margin-top: 0;
+    padding-top: 0;
     background: #fff;
+    .top-mobile-image {
+      object-fit: cover;
+      width: 100%;
+      height: 500px;
+    }
   }
 }
