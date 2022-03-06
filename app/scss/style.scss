@@ -153,6 +153,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/global/top-bg.jpg');
+
+  .top-mobile-image {
+    display: none;
+  }
   &__inner {
     max-width: 900px;
   }
