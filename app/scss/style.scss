@@ -131,7 +131,7 @@
       background-position: center;
       width: 17px;
       height: 17px;
-      background-image: url('../images/icons/search.svg');
+      background-image: url('../images/icons/search-mobile.svg');
       left: 0px;
     }
   }
@@ -376,94 +376,90 @@
 }
 
 .number {
-  padding-top: 150px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/global/number-bg.jpg');
+  padding: 100px 0;
+  padding-top: 210px;
   position: relative;
-  &__innner {
-  }
-  &__info-box {
-    margin-left: 130px;
-    // transform: translateY(-100px);
-    transform: translateY(-274px);
-  }
+  margin-bottom: 150px;
   &__window {
-    width: 647px;
-    height: 152px;
+    padding: 46px 84px;
+    padding-left: 128px;
     border: 5px solid rgba(102, 103, 171, 0.15);
     box-sizing: border-box;
     box-shadow: 10px 25px 125px -20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(30px);
     border-radius: 20px;
+    position: relative;
 
-    img {
+    &::before {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       width: 45px;
       height: 45px;
+      top: 50%;
       transform: translateY(-50%);
+      background-image: url('../images/icons/red-phone.svg');
+      left: 53px;
     }
+    margin-bottom: 60px;
+  }
+
+  &__info {
+    max-width: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .bad-num {
+    transform: translateY(165px);
   }
   &__phone {
+    transition: all 0.3s;
     font-family: Gotham Pro;
     font-style: normal;
     font-weight: bold;
     font-size: 55px;
     line-height: 53px;
-    margin-bottom: 106px;
+    color: #3b3643;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
 
     span {
       color: $red;
     }
-
-    &.old {
-      display: inline-block;
-      margin-bottom: 118px;
-      font-family: Gotham Pro;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 55px;
-      line-height: 53px;
-      color: #3b3643;
-      opacity: 0.2;
-      position: relative;
-      padding: 0 16px;
+    &--old {
+      margin-bottom: 64px;
+      margin-right: 28px;
+      transition: all 0.3s;
       &::before {
         content: '';
         position: absolute;
-        left: 0;
-        right: 0;
+        left: -17px;
         top: 50%;
+        width: 0;
         transform: translateY(-50%);
         height: 7px;
         background-color: #3b3643;
+        transition: all 0.3s;
       }
     }
-  }
-  &__info {
-    transform: translateY(180px);
-    max-width: 650px;
-  }
-  &__images {
-    .number-image {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-
-      // 310
-      // 75
-      &-1 {
-        z-index: 5;
-        r
-      }
-      &-2 {
-z-index: 4;
-      }
-      &-3 {
-z-index: 3;
+    &.old {
+      opacity: 0.2;
+    }
+    &.crossed-out {
+      position: relative;
+      transition: all 0.3s;
+      &::before {
+        right: -17px;
+        width: 107%;
+        transition: all 0.3s;
       }
     }
   }
@@ -473,10 +469,17 @@ z-index: 3;
     font-weight: bold;
     font-size: 36px;
     line-height: 34px;
-    text-align: right;
-    color: $red;
+    color: #e73756;
     margin-bottom: 30px;
-    margin-right: 80px;
+    text-align: right;
+    padding-right: 80px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.3s;
+    &.animated {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
   &__info-text {
     font-family: Gotham Pro;
@@ -484,10 +487,45 @@ z-index: 3;
     font-weight: normal;
     font-size: 25px;
     line-height: 24px;
-    text-align: right;
     color: #898492;
-    margin-left: -40px;
-    margin-right: 80px;
+    text-align: right;
+    padding-right: 80px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.3s;
+    &.animated {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  &__images {
+    .number-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      &.anumated {
+        transition: opacity 0.3s;
+        opacity: 1;
+      }
+      &-black {
+        right: 430px;
+        opacity: 1;
+        z-index: 10;
+      }
+      &-1 {
+        right: 310px;
+        z-index: 10;
+      }
+      &-2 {
+        z-index: 9;
+        right: 100px;
+      }
+      &-3 {
+        z-index: 8;
+      }
+    }
   }
 }
 

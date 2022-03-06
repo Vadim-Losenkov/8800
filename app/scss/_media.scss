@@ -1,0 +1,112 @@
+@media (max-width: 1140px) {
+  .header {
+    &__menu {
+      column-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .header-mobile {
+    overflow-x: auto;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    &__close {
+      cursor: pointer;
+    }
+    &__search {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #dddddd;
+    }
+    &__search-link {
+      padding-left: 40px;
+      position: relative;
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      color: #3b3643;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../images/icons/search-mobile.svg');
+        left: 0px;
+      }
+    }
+
+    &__user {
+      padding: 20px 60px;
+      border-bottom: 1px solid #dddddd;
+      position: relative;
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      color: #3b3643;
+      display: block;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../images/icons/user.svg');
+        left: 20px;
+      }
+    }
+    &__menu {
+      padding: 25px 60px;
+      border-bottom: 1px solid #dddddd;
+      margin-bottom: 25px;
+    }
+    &__menu-link {
+      display: block;
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      color: #3b3643;
+      margin-bottom: 25px;
+      &.active {
+        color: $red;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      text-align: right;
+      color: #3b3643;
+      padding: 0 60px;
+    }
+  }
+}
