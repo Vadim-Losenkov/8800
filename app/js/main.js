@@ -31,8 +31,8 @@ $(function () {
     }, 300);
 
     $('.number__phone--8800').removeClass('bad-num old');
-    $('.number-image-black').css({ opacity: 0 });
-    $('.number-image-1').css({ opacity: 1 });
+    $('.number-image-black, .number-mobile-image-black').css({ opacity: 0 });
+    $('.number-image-1, .number-mobile-image-1').css({ opacity: 1 });
     setTimeout(() => {
       $('.number__info-title').addClass('animated');
     }, 600);
@@ -40,10 +40,10 @@ $(function () {
       $('.number__info-text').addClass('animated');
     }, 750);
     setTimeout(() => {
-      $('.number-image-2').css({ opacity: 1 });
+      $('.number-image-2, .number-mobile-image-2').css({ opacity: 1 });
     }, 900);
     setTimeout(() => {
-      $('.number-image-3').css({ opacity: 1 });
+      $('.number-image-3, .number-mobile-image-3').css({ opacity: 1 });
     }, 1100);
   }
 
@@ -67,13 +67,13 @@ $(function () {
     function checkPosition() {
       const position = Math.round(pageYOffset) + windowHeight;
       console.log(position - numberPosition);
-      if (position - numberPosition > 500) {
+      if (position - numberPosition > 300) {
         setTimeout(() => {
           animateNumber();
-        }, 100);
+        }, 200);
       }
     }
   }
 
-  // useAnimation();
+  useAnimation();
 });
