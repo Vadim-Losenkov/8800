@@ -4,10 +4,64 @@
       column-gap: 20px;
     }
   }
+  .top {
+    background-position: -1160px center;
+    &__inner {
+      max-width: 700px;
+    }
+    &__benefits {
+      flex-wrap: wrap;
+    }
+    &__benefits-item {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media (max-width: 960px) {
+  .header {
+    &__logo-wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 13px;
+      img {
+        width: 50px;
+      }
+    }
+    &__content {
+      display: none;
+    }
+    &__contacts {
+      display: none;
+    }
+    &__links {
+      display: none;
+    }
+    &__burger {
+      display: block;
+      cursor: pointer;
+    }
+    &__mobileText {
+      max-width: 207px;
+      display: block;
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #777777;
+    }
+  }
   .header-mobile {
+    display: block;
+    transform: translateY(-200%);
+    transition: all 0.3s;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &.open {
+      transform: translateY(0%);
+    }
     overflow-x: auto;
     position: fixed;
     z-index: 200;
@@ -104,9 +158,60 @@
       font-weight: normal;
       font-size: 18px;
       line-height: 20px;
-      text-align: right;
       color: #3b3643;
       padding: 0 60px;
+      display: block;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 33px;
+      }
     }
+
+    &__call {
+      padding-left: 60px;
+      position: relative;
+      margin-bottom: 32px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 17px;
+        height: 17px;
+        bottom: 5px;
+        background-image: url('../images/icons/phone.svg');
+        left: 26px;
+      }
+    }
+    &__call-name {
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+      color: #777777;
+      margin-bottom: 4px;
+    }
+    &__call-phone {
+      font-family: Gotham Pro;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 17px;
+      color: #3b3643;
+    }
+  }
+
+  .top {
+    margin-top: -140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    background: #fff;
   }
 }

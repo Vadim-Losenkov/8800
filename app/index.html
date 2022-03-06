@@ -20,9 +20,14 @@
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
-            <a href="#" class="header__logo">
-              <img src="images/global/logo.png" alt="" />
-            </a>
+            <div class="header__logo-wrapper">
+              <a href="#" class="header__logo">
+                <img src="images/global/logo.png" alt="" />
+              </a>
+              <p class="header__mobileText">
+                Инструмент для увеличения продаж и повышения доверия клиентов
+              </p>
+            </div>
             <div class="header__contacts">
               <div class="header__contacts-item icon">
                 <p class="header__contacts-name">По России (бесплатно)</p>
@@ -37,6 +42,9 @@
               <a href="#" class="header__links-link">Задать вопрос</a>
               <a href="#" class="header__links-link">Оплатить</a>
               <a href="#" class="header__links-link icon">Личный кабинет</a>
+            </div>
+            <div class="header__burger" data-header="toggler">
+              <img src="images/icons/burger.svg" alt="" />
             </div>
           </div>
         </div>
@@ -63,7 +71,7 @@
     <div class="header-mobile">
       <div class="header-mobile__search">
         <a href="#" class="header-mobile__search-link">Поиск</a>
-        <div class="header-mobile__close">
+        <div class="header-mobile__close" data-header="toggler">
           <img src="images/icons/close.svg" alt="" />
         </div>
       </div>
@@ -90,7 +98,7 @@
       </div>
     </div>
 
-    <!-- <main class="main">
+    <main class="main">
       <section class="top">
         <div class="container">
           <div class="top__inner">
@@ -126,7 +134,7 @@
           </div>
         </div>
       </section>
-      <section class="slider">
+      <!-- <section class="slider">
         <div class="container">
           <div class="slider__inner">
             <div class="slider__info">
@@ -279,8 +287,8 @@
             </div>
           </div>
         </div>
-      </section>
-    </main> -->
+      </section> -->
+    </main>
     <footer class="footer"></footer>
 
     <script src="js/jquery.min.js"></script>

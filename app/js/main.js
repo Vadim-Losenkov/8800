@@ -1,4 +1,7 @@
 $(function () {
+  $('[data-header="toggler"]').on('click', function (e) {
+    $('.header-mobile').toggleClass('open');
+  });
   $('.slider__box').slick({
     vertical: true,
     arrows: false,
@@ -64,5 +67,5 @@ $(function () {
     }
   }
 
-  useAnimation();
+  // useAnimation();
 });

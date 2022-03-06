@@ -384,6 +384,14 @@ a {
   left: 0px;
 }
 
+.header__burger, .header__mobileText {
+  display: none;
+}
+
+.header-mobile {
+  display: none;
+}
+
 .top {
   margin-bottom: 150px;
   padding-top: 262px;
@@ -886,10 +894,64 @@ a {
     -webkit-column-gap: 20px;
             column-gap: 20px;
   }
+  .top {
+    background-position: -1160px center;
+  }
+  .top__inner {
+    max-width: 700px;
+  }
+  .top__benefits {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top__benefits-item {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 960px) {
+  .header__logo-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 13px;
+            column-gap: 13px;
+  }
+  .header__logo-wrapper img {
+    width: 50px;
+  }
+  .header__content {
+    display: none;
+  }
+  .header__contacts {
+    display: none;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+    cursor: pointer;
+  }
+  .header__mobileText {
+    max-width: 207px;
+    display: block;
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #777777;
+  }
   .header-mobile {
+    display: block;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     overflow-x: auto;
     position: fixed;
     z-index: 200;
@@ -898,6 +960,13 @@ a {
     left: 0;
     right: 0;
     background-color: #fff;
+  }
+  .header-mobile::-webkit-scrollbar {
+    width: 0;
+  }
+  .header-mobile.open {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
   .header-mobile__close {
     cursor: pointer;
@@ -992,9 +1061,56 @@ a {
     font-weight: normal;
     font-size: 18px;
     line-height: 20px;
-    text-align: right;
     color: #3b3643;
     padding: 0 60px;
+    display: block;
+    margin-bottom: 25px;
+  }
+  .header-mobile__link:last-child {
+    margin-bottom: 33px;
+  }
+  .header-mobile__call {
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .header-mobile__call::before {
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 17px;
+    bottom: 5px;
+    background-image: url("../images/icons/phone.svg");
+    left: 26px;
+  }
+  .header-mobile__call-name {
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #777777;
+    margin-bottom: 4px;
+  }
+  .header-mobile__call-phone {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 17px;
+    color: #3b3643;
+  }
+  .top {
+    margin-top: -140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    background: #fff;
   }
 }
 /*# sourceMappingURL=style.min.css.map */
