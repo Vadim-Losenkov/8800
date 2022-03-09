@@ -720,4 +720,134 @@
   }
 }
 
+.services {
+  padding-bottom: 52px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/global/services-bg.jpg');
+  margin-bottom: 150px;
+
+  &__title {
+    max-width: 895px;
+    margin-bottom: 75px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 840px;
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-bottom: 60px;
+  }
+  &__item-title {
+    white-space: nowrap;
+    margin-left: 9px;
+    display: inline-block;
+  }
+  &__item-text {
+    transition: all 0.3s;
+    z-index: -1;
+    opacity: 0;
+    left: 28px;
+    top: -47px;
+    background-color: #fff;
+    position: absolute;
+    width: 407px;
+    min-height: 96px;
+    padding: 21px 18px;
+    // padding-left: 45px;
+    box-shadow: 10px 25px 125px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  &__item-question {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      .services__item-text {
+        z-index: 10;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.tariff {
+  &__banner {
+    border-radius: 10px;
+  }
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__slider {
+    margin-bottom: 70px;
+  }
+  &__item {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 3px solid rgba(102, 103, 171, 0.15);
+    box-sizing: border-box;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 310px;
+  }
+  &__item-title {
+    margin: 30px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e8e8f3;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 24px;
+    text-align: center;
+    color: $red;
+    margin-bottom: 40px;
+  }
+  &__item-time {
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #3b3643;
+    margin-bottom: 27px;
+  }
+  &__item-price {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;
+    color: #3b3643;
+    margin-bottom: 74px;
+  }
+  &__item-button {
+    width: 100%;
+    padding: 20px;
+    font-family: FuturaDemiC;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background: #3b3643;
+    border-radius: 10px;
+  }
+}
+
 @import 'media';
