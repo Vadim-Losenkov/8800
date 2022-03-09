@@ -66,7 +66,6 @@ $(function () {
 
     function checkPosition() {
       const position = Math.round(pageYOffset) + windowHeight;
-      console.log(position - numberPosition);
       if (position - numberPosition > 300) {
         setTimeout(() => {
           animateNumber();
@@ -76,4 +75,35 @@ $(function () {
   }
 
   useAnimation();
+  const $container = $('.container');
+  let containerCoords = $container.offset().left;
+  setSliderPosition();
+  $(window).on('resize', setSliderPosition);
+  $(window).on('orientationchange', setSliderPosition);
+
+  function setSliderPosition() {
+    containerCoords = $container.offset().left;
+    console.log(containerCoords);
+
+    $('.features__inner').css({ marginLeft: `${containerCoords + 15}px` });
+    $('.features__title').css({ marginRight: `${containerCoords + 115}px` });
+  }
+
+  let counter = 0;
+  const $sliderLine = $('.features__slider-line');
+  const $sliderItems = $('.features__slider-item');
+  $('[slider-arrow]').on('click', (e) => {
+    const $target = e.currentTarget.getAttribute('slider-arrow');
+
+    if ($target === 'right' && counter < $sliderItems.length - 1) {
+      counter++;
+      $sliderItems[counter].classList.add('checked');
+    } else if ($target === 'left' && counter > 0) {
+      $sliderItems[counter].classList.remove('checked');
+      counter--;
+    }
+    $sliderLine.css({
+      transform: `translateX(${-550 * counter}px)`,
+    });
+  });
 });

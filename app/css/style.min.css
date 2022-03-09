@@ -970,12 +970,14 @@ a {
   max-width: 805px;
   margin-left: auto;
   margin-right: 100px;
+  width: 100%;
 }
 
 .features__slider {
   position: relative;
   margin-top: 50px;
   overflow: hidden;
+  padding-bottom: 85px;
 }
 
 .features__slider-box {
@@ -989,6 +991,10 @@ a {
           backdrop-filter: blur(100px);
   border-radius: 10px;
   border: 3px solid #e9e9fa;
+}
+
+.features__slider-arrow {
+  cursor: pointer;
 }
 
 .features__slider-arrows {
@@ -1010,8 +1016,8 @@ a {
           column-gap: 0px;
   position: relative;
   z-index: 10;
-  -webkit-transform: translateX(-4400px);
-          transform: translateX(-4400px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .features__slider-item {
@@ -1024,7 +1030,27 @@ a {
 
 .features__slider-item.checked .features__slider-title,
 .features__slider-item.checked .features__slider-text {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   color: #3b3643;
+}
+
+.features__slider-item.checked svg .red {
+  stroke: #E73756;
+}
+
+.features__slider-item.checked svg .default {
+  stroke: #3b3643;
+}
+
+.features__slider-item svg .red {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.features__slider-item svg .default {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .features__slider-icon {
@@ -1039,6 +1065,8 @@ a {
   line-height: 21px;
   color: #ffffff;
   margin-bottom: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .features__slider-text {
@@ -1048,6 +1076,49 @@ a {
   font-size: 18px;
   line-height: 150%;
   color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.analytics {
+  padding: 100px 0;
+  margin: 40px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/global/analytics-bg.svg");
+}
+
+.analytics__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.analytics__info {
+  max-width: 695px;
+  width: 100%;
+}
+
+.analytics__title {
+  margin-bottom: 30px;
+}
+
+.analytics__text {
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 200%;
+  color: #3b3643;
 }
 
 @media (max-width: 1710px) {
