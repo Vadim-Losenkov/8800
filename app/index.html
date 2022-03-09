@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=1920px" />
     <!-- device-width, initial-scale=1.0 -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>8800</title>
@@ -115,7 +115,7 @@
               Клиенты смогут звонить вам бесплатно с любого номера телефона.
             </p>
             <div class="top__buttons">
-              <a href="#" class="top__buttons-btn"> Подключить за 15 минут </a>
+              <a href="#popup-text" class="top__buttons-btn open-popup" data-effect="mfp-zoom-in"> Подключить за 15 минут </a>
               <a href="#" class="top__buttons-link"> Подобрать номер </a>
             </div>
             <div class="top__benefits">
@@ -1004,15 +1004,36 @@
                   <p class="services__item-text"></p>
                 </div>
               </div>
+              <div class="services__col">
+                <div class="services__item">
+                  <div class="services__item-icon">
+                    <img src="images/icons/services/item-8.svg" alt="" />
+                  </div>
+                  <h6 class="services__item-title">Интеграция с CRM</h6>
+                  <p class="services__item-text"></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer"></footer>
+    
+    <div class="popups">
+      <div id="popup-text" class="text-popup mfp-with-anim mfp-hide">
+        <h2 class="text-popup__title title">
+          
+        </h2>
+        <p class="text-popup__info">
+          
+        </p>
+      </div>
+    </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
