@@ -777,14 +777,51 @@
 }
 
 .tariff {
+  margin-bottom: 155px;
   &__banner {
     border-radius: 10px;
   }
   &__title {
     margin-bottom: 70px;
   }
+  &__slider-wrapper {
+    position: relative;
+  }
+  &__arrows-arrow {
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    circle,
+    path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      circle {
+        fill: #3b3643;
+      }
+      path {
+        stroke: #e8e8f3;
+      }
+    }
+  }
   &__slider {
     margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 310px;
+      background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
   }
   &__item {
     padding: 25px;
@@ -796,6 +833,25 @@
     text-align: center;
     display: inline-block;
     width: 310px;
+    margin: 0 10px;
+    &.active {
+      position: relative;
+      .tariff__item-button {
+        background: $red;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 26px;
+        top: 0;
+        width: 27px;
+        height: 27px;
+        background-image: url('../images/icons/bookmark.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
   }
   &__item-title {
     margin: 30px;
@@ -847,6 +903,116 @@
     color: #ffffff;
     background: #3b3643;
     border-radius: 10px;
+  }
+  &__banner {
+    user-select: none;
+  }
+  &__docs {
+    margin-top: 70px;
+  }
+  &__docs-box {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+  }
+  &__docs-link {
+    font-family: 'FuturaBookC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #3b3643;
+    position: relative;
+    padding: 0 35px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-image: url('../images/icons/docs.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &__docs-title {
+    margin-bottom: 55px;
+  }
+}
+
+.brands {
+  padding: 100px 0;
+  padding-bottom: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/global/brands-bg.svg');
+  margin-bottom: 150px;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 50px;
+  }
+  &__item {
+    margin-bottom: 50px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.scope {
+  margin-bottom: 150px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__subtitle {
+    font-family: 'FuturaBookC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    color: #3b3643;
+    margin-bottom: 65px;
+  }
+  &__item {
+    border: 3px solid rgba(102, 103, 171, 0.15);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 0 10px;
+    max-width: 360px;
+  }
+  &__item-image {
+    margin-bottom: 30px;
+  }
+  &__item-name {
+    font-family: 'FuturaBookC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #3b3643;
+    margin-bottom: 30px;
+  }
+  &__item-title {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #3b3643;
   }
 }
 

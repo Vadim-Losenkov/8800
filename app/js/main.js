@@ -5,11 +5,11 @@ $(function () {
     callbacks: {
       beforeOpen: function () {
         this.st.mainClass = this.st.el.attr('data-effect');
-      }
+      },
     },
-    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
-  
+
   $('[data-header="toggler"]').on('click', function (e) {
     $('.header-mobile').toggleClass('open');
   });
@@ -27,6 +27,18 @@ $(function () {
         },
       },
     ],
+  });
+  $('.tariff__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.tariff__arrows-arrow--prev'),
+    nextArrow: $('.tariff__arrows-arrow--next'),
+  });
+  $('.scope__items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // prevArrow: $('.tariff__arrows-arrow--prev'),
+    // nextArrow: $('.tariff__arrows-arrow--next'),
   });
 
   $('.number__window').on('click', function (e) {
