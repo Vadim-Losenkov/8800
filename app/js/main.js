@@ -34,13 +34,25 @@ $(function () {
     prevArrow: $('.tariff__arrows-arrow--prev'),
     nextArrow: $('.tariff__arrows-arrow--next'),
   });
-  $('.scope__items').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    // prevArrow: $('.tariff__arrows-arrow--prev'),
-    // nextArrow: $('.tariff__arrows-arrow--next'),
+  $('.scope__items').on('init', function (event, slick) {
+    console.log(event);
   });
-
+  $('.scope__items').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.scope__arrows-arrow--prev'),
+    nextArrow: $('.scope__arrows-arrow--next'),
+    centerMode: false,
+    variableWidth: true,
+  });
+  $('.reviews__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.reviews__arrows-arrow--prev'),
+    nextArrow: $('.reviews__arrows-arrow--next'),
+    centerMode: false,
+    variableWidth: true,
+  });
   $('.number__window').on('click', function (e) {
     animateNumber();
   });
