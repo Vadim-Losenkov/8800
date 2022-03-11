@@ -2503,16 +2503,19 @@ img.mfp-img {
   font-size: 18px;
 }
 
-.choise__numbers {
+.choise__numbers-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  width: 100%;
 }
 
 .choise__numbers-item {
@@ -2531,10 +2534,28 @@ img.mfp-img {
   line-height: 25px;
   color: #3b3643;
   cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.choise__numbers-item.active {
+  color: #E73756;
 }
 
 .choise__numbers-item.active .choise__numbers-item__select {
-  background-color: #E73756;
+  background-color: transparent;
+  position: relative;
+}
+
+.choise__numbers-item.active .choise__numbers-item__select::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/icons/check.svg");
 }
 
 .choise__numbers-item__select {
@@ -2542,6 +2563,34 @@ img.mfp-img {
   border-radius: 2px;
   width: 21px;
   height: 21px;
+}
+
+.choise__button {
+  padding: 20px 60px;
+  background-color: #E73756;
+  font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.choise__button-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 @media (max-width: 1710px) {

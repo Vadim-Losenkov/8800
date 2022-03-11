@@ -1251,10 +1251,14 @@
     }
   }
 
-  &__numbers {
+  &__numbers-box {
     display: flex;
     justify-content: start;
-    align-items: center;
+    // justify-content: space-between;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
   }
   &__numbers-item {
     display: flex;
@@ -1267,10 +1271,24 @@
     line-height: 25px;
     color: #3b3643;
     cursor: pointer;
+    margin-bottom: 40px;
 
     &.active {
+      color: $red;
       .choise__numbers-item__select {
-        background-color: $red;
+        background-color: transparent;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          background-image: url('../images/icons/check.svg');
+        }
       }
     }
   }
@@ -1279,6 +1297,26 @@
     border-radius: 2px;
     width: 21px;
     height: 21px;
+  }
+  &__button {
+    padding: 20px 60px;
+    background-color: $red;
+    font-family: 'FuturaDemiC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 10px;
+
+    &-inner {
+      display: flex;
+      column-gap: 10px;
+    }
   }
 }
 
