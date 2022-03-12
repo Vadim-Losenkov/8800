@@ -9,6 +9,7 @@ $(function () {
     },
     midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
+  $('.text-popup__close').on('click', () => $('.open-popup').magnificPopup('close'));
 
   $('[data-header="toggler"]').on('click', function (e) {
     $('.header-mobile').toggleClass('open');
