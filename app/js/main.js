@@ -141,4 +141,20 @@ $(function () {
       transform: `translateX(${-550 * counter}px)`,
     });
   });
+
+  $('.choise__numbers-item').on('click', function (e) {
+    $('.choise__numbers-item').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.questions__item').on('click', function (e) {
+    $(this).toggleClass('active').children('.questions__item-info').slideToggle(300);
+  });
+
+  $('[data-search="close"]').on('click', () => {
+    $('[data-search="field"]')[0].value = '';
+    $('[data-search="wrapper"]').removeClass('active');
+  });
+  $('[data-search="open"]').on('click', () => {
+    $('[data-search="wrapper"]').addClass('active');
+  });
 });

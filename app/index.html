@@ -63,14 +63,14 @@
               <a href="#" class="header__menu-link">Поддержка</a>
               <a href="#" class="header__menu-link">Контакты</a>
             </nav>
-            <a href="#" class="header__search"> Поиск </a>
+            <a href="#" class="header__search" data-search="open"> Поиск </a>
           </div>
         </div>
       </div>
     </header>
     <div class="header-mobile">
       <div class="header-mobile__search">
-        <a href="#" class="header-mobile__search-link">Поиск</a>
+        <a href="#" class="header-mobile__search-link" data-search="open">Поиск</a>
         <div class="header-mobile__close" data-header="toggler">
           <img src="images/icons/close.svg" alt="" />
         </div>
@@ -95,6 +95,35 @@
       <div class="header-mobile__call">
         <div class="header-mobile__call-name">По Москве</div>
         <a href="tel:+7(800)777-06-45" class="header-mobile__call-phone">+7(499)700-50-36 </a>
+      </div>
+    </div>
+    <div class="search" data-search="wrapper">
+      <div class="search__input-wrapper">
+        <div class="container">
+          <div class="search__input">
+            <div class="search__input-box">
+              <img src="images/icons/search-input.svg" alt="" />
+              <input
+                class="search__input-field"
+                data-search="field"
+                placeholder="Начните вводить запрос"
+                type="text"
+              />
+            </div>
+            <div class="search__input-close" data-search="close">
+              <img src="images/icons/search-close.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="search__result">
+          <div class="search__result-text">Результаты поиска:</div>
+          <a href="#" class="search__result-item">Виртуальная АТС</a>
+          <a href="#" class="search__result-item">Что такое 8 800?</a>
+          <a href="#" class="search__result-item">Доп.сервисы</a>
+          <a href="#" class="search__result-item">FMC</a>
+        </div>
       </div>
     </div>
 
@@ -1476,7 +1505,10 @@
       <section class="choise">
         <div class="container">
           <div class="choise__inner">
-            <h2 class="choise__title title">Подберите красивый номер</h2>
+            <h2 class="choise__title title">
+              Подберите <br />
+              красивый номер
+            </h2>
             <div class="choise__select">
               <div class="choise__select-title">
                 Укажите понравившиеся <br />
@@ -1569,8 +1601,231 @@
           </div>
         </div>
       </section>
+      <section class="questions">
+        <div class="container">
+          <div class="questions__inner">
+            <h2 class="questions__title title">Часто задаваемые вопросы</h2>
+            <div class="questions__box">
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Зачем нужен номер 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Как звонить на номер 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Можно ли переадресовывать звонки с номера 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Как настроить услугу?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  С каких телефонов клиенты могут звонить на номер 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Номера 8800 многоканальные?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Какое количество одновременных звонков принимает номер 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Какие сервисы ВАТС подключаются вместе с телефоном 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Что такое софтфон?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+              <div class="questions__item">
+                <h6 class="questions__item-title">
+                  <img src="images/icons/angle-down.svg" alt="" />
+                  Как забронировать и купить номер 8800?
+                </h6>
+                <p class="questions__item-info">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto praesentium
+                  ullam expedita placeat distinctio provident ratione veritatis rem, tempora fugit.
+                  Optio recusandae nobis commodi aut cumque minus porro animi nemo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="container">
+          <div class="form__inner">
+            <div class="form__info">
+              <h2 class="form__title">
+                <div>Сомневаетесь? Попробуйте</div>
+                7 дней бесплатно
+              </h2>
+              <div class="form__items">
+                <div class="form__item">
+                  <h6 class="form__item-title"><span>от</span> 0 руб.</h6>
+                  <div class="form__item-text">Тестовый период 7 дней</div>
+                </div>
+                <div class="form__item">
+                  <h6 class="form__item-title">15 мин</h6>
+                  <div class="form__item-text">Среднее время подключения</div>
+                </div>
+              </div>
+            </div>
+            <div class="form__field">
+              <div class="form__field-title">
+                Заполните анкету <br />
+                обратной связи
+              </div>
+              <input type="text" placeholder="Имя" class="form__field-input" />
+              <input type="tel" placeholder="Номер" class="form__field-input" />
+              <button class="form__field-button">
+                <div class="form__field-button__inner">
+                  <img src="images/icons/letter.svg" alt="" />
+                  Отправить
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__col">
+            <h6 class="footer__col-title">Отдел по работе с клиентами</h6>
+            <a href="#" class="footer__col-link">8 800 777-8-800 </a>
+            <a href="#" class="footer__col-link">+7 495 607 21-27 </a>
+            <a href="#" class="footer__col-link">E-mail: info@8-800.su </a>
+            <a href="#" class="footer__col-link">понедельник - пятница </a>
+            <a href="#" class="footer__col-link">c 10:00 до 18:00 по МСК </a>
+          </div>
+          <div class="footer__col">
+            <h6 class="footer__col-title">Техническая поддержка</h6>
+            <a href="#" class="footer__col-link">8 800 777-8-800 </a>
+            <a href="#" class="footer__col-link">+7 495 607 21-27 </a>
+            <a href="#" class="footer__col-link">Email: support@8-800.su </a>
+            <a href="#" class="footer__col-link">Время работы: 24/7</a>
+          </div>
+          <div class="footer__col">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 5L5 12L12 19"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="footer__col">
+            <h6 class="footer__col-title">Виртуальная ATC</h6>
+            <a href="#" class="footer__col-link">Контакт центр</a>
+            <a href="#" class="footer__col-link">CRM</a>
+          </div>
+          <div class="footer__col">
+            <h6 class="footer__col-title">Виртуальные номера</h6>
+            <a href="#" class="footer__col-link">Купить номер 499</a>
+            <a href="#" class="footer__col-link">Купить номер 8-800</a>
+            <a href="#" class="footer__col-link">Купить красивый номер 8-800</a>
+          </div>
+          <div class="footer__col">
+            <h6 class="footer__col-title">FMC</h6>
+          </div>
+          <div class="footer__col">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 5L19 12L12 19"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <div class="popups">
       <div id="popup-text" class="text-popup mfp-with-anim mfp-hide">
