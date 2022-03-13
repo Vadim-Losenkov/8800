@@ -14,6 +14,16 @@ $(function () {
   $('[data-header="toggler"]').on('click', function (e) {
     $('.header-mobile').toggleClass('open');
   });
+  $('[data-banner-bottom="close"]').on('click', () => {
+    $('[data-banner-bottom="wrapper"]').css({
+      transform: `translateY(100px)`,
+      opacity: 0,
+      transition: 'all .3s',
+    });
+    setTimeout(() => {
+      $('[data-banner-bottom="wrapper"]').css({ display: 'none' });
+    }, 300);
+  });
   $('.slider__box').slick({
     vertical: true,
     arrows: false,
@@ -34,6 +44,26 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: $('.tariff__arrows-arrow--prev'),
     nextArrow: $('.tariff__arrows-arrow--next'),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 570,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
   $('.scope__items').on('init', function (event, slick) {
     console.log(event);
@@ -110,6 +140,7 @@ $(function () {
     }
   }
 
+  let slideWidth = 550;
   useAnimation();
   const $container = $('.container');
   let containerCoords = $container.offset().left;
@@ -118,6 +149,10 @@ $(function () {
   $(window).on('orientationchange', setSliderPosition);
 
   function setSliderPosition() {
+    if (window.innerWidth <= 610) {
+      slideWidth = window.innerWidth - 30;
+    }
+
     containerCoords = $container.offset().left;
     console.log(containerCoords);
 
@@ -128,6 +163,7 @@ $(function () {
   let counter = 0;
   const $sliderLine = $('.features__slider-line');
   const $sliderItems = $('.features__slider-item');
+  $sliderItems.css({ width: slideWidth + 'px' });
   $('[slider-arrow]').on('click', (e) => {
     const $target = e.currentTarget.getAttribute('slider-arrow');
 
@@ -139,7 +175,7 @@ $(function () {
       counter--;
     }
     $sliderLine.css({
-      transform: `translateX(${-550 * counter}px)`,
+      transform: `translateX(${-slideWidth * counter}px)`,
     });
   });
 
@@ -155,7 +191,8 @@ $(function () {
     $('[data-search="field"]')[0].value = '';
     $('[data-search="wrapper"]').removeClass('active');
   });
-  $('[data-search="open"]').on('click', () => {
+  $('[data-search="open"]').on('click', (e) => {
+    e.preventDefault();
     $('[data-search="wrapper"]').addClass('active');
   });
 });

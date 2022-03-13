@@ -148,6 +148,7 @@
 }
 
 .top {
+  position: relative;
   margin-bottom: 150px;
   padding-top: 262px;
   padding-bottom: 52px;
@@ -455,6 +456,7 @@
     display: inline-block;
     position: relative;
     z-index: 10;
+    white-space: nowrap;
 
     span {
       color: $red;
@@ -562,6 +564,8 @@
     align-items: flex-start;
     column-gap: 30px;
     margin-top: 60px;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   &__item-image {
     width: 236px;
@@ -591,11 +595,12 @@
     line-height: 100%;
     text-align: center;
     color: #3b3643;
+    margin-bottom: 20px;
   }
 }
 
 .features {
-  padding: 150px 0;
+  padding: 50px 0;
   padding-top: 61px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -612,11 +617,13 @@
     position: relative;
     margin-top: 50px;
     overflow: hidden;
-    padding-bottom: 85px;
+    padding-bottom: 185px;
   }
   &__slider-box {
     position: absolute;
-    width: 550px;
+    max-width: 550px;
+    left: 0px;
+    right: 15px;
     height: 350px;
     background: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 65px 43px -48px rgba(49, 44, 79, 0.11);
@@ -633,6 +640,7 @@
     position: absolute;
     bottom: -35px;
     left: 53px;
+    z-index: 20;
   }
   &__slider-line {
     display: flex;
@@ -644,7 +652,6 @@
   }
   &__slider-item {
     padding: 37px 53px;
-    width: 550px;
     flex: none;
 
     &.checked {
@@ -709,6 +716,10 @@
     max-width: 695px;
     width: 100%;
   }
+  &__mobileTitle {
+    display: none;
+    margin-bottom: 30px;
+  }
   &__title {
     margin-bottom: 30px;
   }
@@ -729,7 +740,9 @@
   background-position: center;
   background-image: url('../images/global/services-bg.jpg');
   margin-bottom: 150px;
-
+  &__mobileBg {
+    display: none;
+  }
   &__title {
     max-width: 895px;
     margin-bottom: 75px;
@@ -739,6 +752,7 @@
     justify-content: space-between;
     max-width: 840px;
     width: 100%;
+    column-gap: 50px;
   }
   &__item {
     display: flex;
@@ -781,6 +795,32 @@
 .tariff {
   margin-bottom: 155px;
   &__banner {
+    background-image: url('../images/global/tariff-banner-bg.jpg');
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 40px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+  &__banner-title {
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 115%;
+    color: #ffffff;
+  }
+  &__banner-button {
+    font-family: 'FuturaDemiC';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    padding: 19px 80px;
+    border: 3px solid #ffffff;
     border-radius: 10px;
   }
   &__title {
@@ -793,6 +833,7 @@
     position: absolute;
     top: 50%;
     right: -80px;
+    z-index: 10;
     transform: translateY(-50%);
     cursor: pointer;
     circle,
@@ -916,8 +957,11 @@
     display: flex;
     align-items: center;
     column-gap: 36px;
+    flex-wrap: wrap;
   }
+
   &__docs-link {
+    margin-bottom: 50px;
     font-family: 'FuturaBookC';
     font-style: normal;
     font-weight: 400;
@@ -1641,6 +1685,41 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.banner-bottom {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  &__inner {
+    padding: 25px 55px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150.69%;
+    max-width: 300px;
+  }
+  &__info {
+    max-width: 300px;
+  }
+  &__info-text {
+    font-family: 'FuturaBookC';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  &__close {
+    cursor: pointer;
   }
 }
 

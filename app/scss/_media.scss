@@ -13,6 +13,13 @@
     right: 200px !important;
   }
 }
+@media (max-width: 1500px) {
+  .tariff {
+    &__arrows-arrow {
+      right: -5px;
+    }
+  }
+}
 @media (max-width: 1300px) {
   .number {
     margin-top: 100px;
@@ -47,6 +54,40 @@
     &__info {
       max-width: 520px;
       max-width: 390px;
+    }
+  }
+  .features {
+    &__title {
+      margin-right: auto !important;
+      max-width: 550px;
+    }
+  }
+  .banner-top,
+  .banner-bottom {
+    display: none;
+  }
+
+  .services {
+    background: #fff;
+    &__info {
+      max-width: 100%;
+    }
+    &__mobileBg {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 50px;
+      img {
+        width: 500px;
+      }
+    }
+    &__item-text {
+      left: -150px;
+      top: 35px;
+    }
+    &__col.right {
+      .services__item-text {
+        left: -380px;
+      }
     }
   }
 }
@@ -323,19 +364,35 @@
     }
     &__info {
       order: -1;
+      align-items: flex-start;
     }
     .crossed-out {
       display: none;
     }
     &__window {
       margin-bottom: 20px;
+      padding: 20px 40px;
+      padding-left: 60px;
     }
     &__info-title {
       margin-bottom: 10px;
       padding-right: 10px;
+      font-size: 21px;
+      line-height: 20px;
+      text-align: left;
+      max-width: 100%;
+      width: 100%;
+      padding-left: 10px;
     }
+
     &__info-text {
       padding-right: 10px;
+      font-size: 16px;
+      line-height: 15px;
+      text-align: left;
+      max-width: 100%;
+      width: 100%;
+      padding-left: 10px;
     }
     &-mobile {
       display: flex;
@@ -349,7 +406,7 @@
       bottom: 0;
       right: 0;
       opacity: 0;
-      transition: opacity .3s;
+      transition: opacity 0.3s;
       &-black {
         opacity: 1;
         width: 190px !important;
@@ -370,6 +427,36 @@
     &__images {
       display: none;
     }
+    &__phone {
+      font-size: 28px;
+      line-height: 27px;
+    }
+  }
+
+  .analytics {
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+    &__title {
+      display: none;
+    }
+    &__mobileTitle {
+      display: block;
+    }
+  }
+
+  .tariff__banner {
+    &-title {
+      margin-bottom: 30px;
+    }
+    flex-wrap: wrap;
+    padding: 38px;
+    justify-content: center;
   }
 }
 
@@ -377,6 +464,9 @@
   .title {
     font-size: 21px;
     line-height: 135%;
+  }
+  .features {
+    margin-bottom: 50px;
   }
   .top {
     margin-top: 0;
@@ -451,7 +541,7 @@
       margin-bottom: 40px;
     }
   }
-  
+
   .number {
     &__inner {
       flex-direction: column;
@@ -469,8 +559,79 @@
       height: 25px;
     }
   }
+
+  .users {
+    &__item-image {
+      width: 200px;
+      height: 265px;
+      margin-bottom: 18px;
+    }
+    &__item-title {
+      font-size: 16px;
+      line-height: 135%;
+    }
+  }
+
+  .services {
+    &__info {
+      display: block;
+    }
+    &__mobileBg img {
+      width: auto;
+    }
+    &__item {
+      position: relative;
+    }
+    &__item-icon {
+      width: 30px;
+      height: 30px;
+    }
+    &__item-question {
+      position: static;
+      flex: none;
+    }
+    &__item-title {
+      white-space: normal;
+      font-family: 'FuturaBookC';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    &__item-text {
+      left: 0;
+      right: 0;
+      max-width: 340px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__col.right {
+      .services__item-text {
+        left: 0;
+      }
+    }
+  }
+  .tariff {
+    &__slider::before {
+      display: none;
+    }
+    &__banner-title {
+      font-size: 21px;
+      line-height: 150%;
+    }
+    &__banner-button {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
+@media (max-width: 610px) {
+}
 @media (max-width: 560px) {
   .top {
     .top-mobile-image {
@@ -499,5 +660,35 @@
       font-size: 18px;
       line-height: 20px;
     }
+  }
+  .number {
+    &__phone {
+      font-size: 21px;
+    }
+  }
+  .features {
+    &__slider-item {
+      padding: 42px 35px;
+    }
+    &__slider-box {
+      height: 350px;
+    }
+    &__slider-icon {
+      width: 77px;
+      height: 77px;
+      margin-bottom: 30px;
+    }
+    &__slider-title {
+      font-size: 16px;
+      line-height: 15px;
+    }
+    &__slider-text {
+      font-size: 16px;
+      line-height: 15px;
+    }
+  }
+  .analytics__text {
+    font-size: 16px;
+    line-height: 200%;
   }
 }
