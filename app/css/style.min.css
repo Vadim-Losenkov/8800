@@ -656,6 +656,185 @@ img.mfp-img {
   }
 }
 
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+}
+
+.nice-select:hover {
+  border-color: #dbdbdb;
+}
+
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: #999;
+}
+
+.nice-select:after {
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  content: '';
+  display: block;
+  height: 5px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 5px;
+}
+
+.nice-select.open:after {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+}
+
+.nice-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none;
+}
+
+.nice-select.disabled:after {
+  border-color: #cccccc;
+}
+
+.nice-select.wide {
+  width: 100%;
+}
+
+.nice-select.wide .list {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.nice-select.right {
+  float: right;
+}
+
+.nice-select.right .list {
+  left: auto;
+  right: 0;
+}
+
+.nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px;
+}
+
+.nice-select.small:after {
+  height: 4px;
+  width: 4px;
+}
+
+.nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px;
+}
+
+.nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+          box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(-21px);
+  transform: scale(0.75) translateY(-21px);
+  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+}
+
+.nice-select .list:hover .option:not(:hover) {
+  background-color: transparent !important;
+}
+
+.nice-select .option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background-color: #f6f6f6;
+}
+
+.nice-select .option.selected {
+  font-weight: bold;
+}
+
+.nice-select .option.disabled {
+  background-color: transparent;
+  color: #999;
+  cursor: default;
+}
+
+.no-csspointerevents .nice-select .list {
+  display: none;
+}
+
+.no-csspointerevents .nice-select.open .list {
+  display: block;
+}
+
 .mfp-zoom-in .mfp-with-anim {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2300,6 +2479,10 @@ img.mfp-img {
   background-image: url("../images/global/choice-bg.jpg");
 }
 
+.choise .phone-select::after {
+  border: none;
+}
+
 .choise__title {
   margin-bottom: 40px;
   font-family: 'Gotham Pro';
@@ -2763,10 +2946,33 @@ img.mfp-img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .footer__col {
   max-width: 200px;
+  width: 100%;
+}
+
+.footer__arrow {
+  width: 24px;
+}
+
+.footer__slider-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.footer__slider {
+  max-width: 550px;
+}
+
+.footer__slider .footer__col {
+  margin: 0 24px;
 }
 
 .footer__col-title {
@@ -3169,6 +3375,18 @@ img.mfp-img {
   }
   .form__inner {
     display: block;
+  }
+  .footer__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+  }
+  .footer__slider-wrapper {
+    margin-top: 55px;
   }
 }
 
@@ -3805,6 +4023,29 @@ img.mfp-img {
     font-size: 21px;
     line-height: 150%;
   }
+  .footer__inner {
+    display: block;
+  }
+  .footer__col.first-col {
+    margin-bottom: 52px;
+  }
+  .footer__slider {
+    max-width: 450px;
+  }
+  .text-popup {
+    padding: 30px !important;
+  }
+  .text-popup__title {
+    margin-bottom: 20px;
+    padding-right: 40px;
+  }
+  .text-popup__info {
+    padding-right: 20px;
+  }
+  .text-popup__close {
+    right: 20px;
+    top: 20px;
+  }
 }
 
 @media (max-width: 610px) {
@@ -3908,6 +4149,9 @@ img.mfp-img {
     line-height: 21px;
     margin-bottom: 30px;
   }
+  .footer__slider {
+    max-width: 170px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -3969,6 +4213,15 @@ img.mfp-img {
   .analytics__text {
     font-size: 16px;
     line-height: 200%;
+  }
+  .search__input-box input {
+    font-size: 16px;
+    line-height: 120%;
+    min-width: auto;
+  }
+  .search__result-item {
+    font-size: 16px;
+    line-height: 120%;
   }
 }
 /*# sourceMappingURL=style.min.css.map */

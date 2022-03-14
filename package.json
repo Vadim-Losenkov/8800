@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "carousel": "^0.0.3",
+    "jquery-nice-select": "^1.1.0",
     "normalize.css": "^8.0.1",
     "slick": "^1.12.2",
     "slick-carousel": "^1.8.1",

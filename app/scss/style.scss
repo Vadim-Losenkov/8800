@@ -1241,6 +1241,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/global/choice-bg.jpg');
+  .phone-select {
+    &::after {
+      border: none;
+    }
+  }
   &__title {
     margin-bottom: 40px;
     font-family: 'Gotham Pro';
@@ -1579,9 +1584,24 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    column-gap: 20px;
   }
   &__col {
     max-width: 200px;
+    width: 100%;
+  }
+  &__arrow {
+    width: 24px;
+  }
+  &__slider-wrapper {
+    display: flex;
+    column-gap: 20px;
+  }
+  &__slider {
+    max-width: 550px;
+    .footer__col {
+      margin: 0 24px;
+    }
   }
   &__col-title {
     font-family: 'Gotham Pro';

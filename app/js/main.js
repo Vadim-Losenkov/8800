@@ -13,6 +13,8 @@ $(function () {
 
   $('[data-header="toggler"]').on('click', function (e) {
     $('.header-mobile').toggleClass('open');
+    $('[data-search="field"]')[0].value = '';
+    $('[data-search="wrapper"]').removeClass('active');
   });
   $('[data-banner-bottom="close"]').on('click', () => {
     $('[data-banner-bottom="wrapper"]').css({
@@ -104,6 +106,11 @@ $(function () {
     prevArrow: $('.reviews__arrows-arrow--prev'),
     nextArrow: $('.reviews__arrows-arrow--next'),
     centerMode: false,
+    variableWidth: true,
+  });
+  $('.footer__slider').slick({
+    prevArrow: $('.footer__slider-arrow--left'),
+    nextArrow: $('.footer__slider-arrow--right'),
     variableWidth: true,
   });
   $('.number__window').on('click', function (e) {
@@ -216,4 +223,5 @@ $(function () {
     e.preventDefault();
     $('[data-search="wrapper"]').addClass('active');
   });
+  $('.phone-select').niceSelect();
 });

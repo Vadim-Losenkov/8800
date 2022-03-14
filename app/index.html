@@ -1571,7 +1571,18 @@
             </h2>
             <div class="choise__select">
               <div class="choise__select-title">Укажите понравившиеся цифры в поле ниже</div>
-              <div class="choise__select-number">8-800-</div>
+              <div class="choise__select-number">
+                <div>8-800-</div>
+                <select class="phone-select">
+                  <option value="1">777</option>
+                  <option value="2">776</option>
+                  <option value="2">776</option>
+                  <option value="2">776</option>
+                  <option value="2">776</option>
+                  <option value="2">776</option>
+                  <option value="2">776</option>
+                </select>
+              </div>
               <div class="choise__select-footer">
                 <a href="#" class="choise__select-button"> Подобрать </a>
                 <div class="choise__select-info">
@@ -1818,7 +1829,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__col">
+          <div class="footer__col first-col">
             <h6 class="footer__col-title">Отдел по работе с клиентами</h6>
             <a href="#" class="footer__col-link">8 800 777-8-800 </a>
             <a href="#" class="footer__col-link">+7 495 607 21-27 </a>
@@ -1833,53 +1844,57 @@
             <a href="#" class="footer__col-link">Email: support@8-800.su </a>
             <a href="#" class="footer__col-link">Время работы: 24/7</a>
           </div>
-          <div class="footer__col">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 5L5 12L12 19"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div class="footer__col">
-            <h6 class="footer__col-title">Виртуальная ATC</h6>
-            <a href="#" class="footer__col-link">Контакт центр</a>
-            <a href="#" class="footer__col-link">CRM</a>
-          </div>
-          <div class="footer__col">
-            <h6 class="footer__col-title">Виртуальные номера</h6>
-            <a href="#" class="footer__col-link">Купить номер 499</a>
-            <a href="#" class="footer__col-link">Купить номер 8-800</a>
-            <a href="#" class="footer__col-link">Купить красивый номер 8-800</a>
-          </div>
-          <div class="footer__col">
-            <h6 class="footer__col-title">FMC</h6>
-          </div>
-          <div class="footer__col">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 5L19 12L12 19"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+          <div class="footer__slider-wrapper">
+            <div class="footer__arrow footer__slider-arrow--left">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 5L5 12L12 19"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="footer__slider">
+              <div class="footer__col">
+                <h6 class="footer__col-title">Виртуальная ATC</h6>
+                <a href="#" class="footer__col-link">Контакт центр</a>
+                <a href="#" class="footer__col-link">CRM</a>
+              </div>
+              <div class="footer__col">
+                <h6 class="footer__col-title">Виртуальные номера</h6>
+                <a href="#" class="footer__col-link">Купить номер 499</a>
+                <a href="#" class="footer__col-link">Купить номер 8-800</a>
+                <a href="#" class="footer__col-link">Купить красивый номер 8-800</a>
+              </div>
+              <div class="footer__col">
+                <h6 class="footer__col-title">FMC</h6>
+              </div>
+            </div>
+            <div class="footer__arrow footer__slider-arrow--right">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 5L19 12L12 19"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -1958,6 +1973,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
