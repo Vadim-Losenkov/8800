@@ -1041,6 +1041,7 @@
     top: 50%;
     right: -80px;
     transform: translateY(-50%);
+    z-index: 10;
     cursor: pointer;
     circle,
     path {
@@ -1055,6 +1056,9 @@
         stroke: #e8e8f3;
       }
     }
+  }
+  &__dots {
+    display: none;
   }
   &__items {
     position: relative;
@@ -1112,6 +1116,7 @@
     top: 50%;
     right: -80px;
     transform: translateY(-50%);
+    z-index: 10;
     cursor: pointer;
     circle,
     path {
@@ -1135,7 +1140,7 @@
     &::before {
       content: '';
       position: absolute;
-      z-index: 10;
+      z-index: 9;
       top: 0;
       bottom: 0;
       right: 0;
@@ -1231,7 +1236,7 @@
 
 .choise {
   padding-top: 143px;
-  padding-bottom: 180px;
+  padding-bottom: 110px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1257,7 +1262,8 @@
     box-shadow: 0px 54px 45px -42px rgba(49, 45, 79, 0.1);
     backdrop-filter: blur(200px);
     border-radius: 30px;
-    width: 602px;
+    max-width: 602px;
+    width: 100%;
     border: 3px solid #e9e9fa;
   }
   &__select-title {
@@ -1268,6 +1274,7 @@
     line-height: 150%;
     color: #3b3643;
     margin-bottom: 47px;
+    max-width: 340px;
   }
   &__select-number {
     font-family: 'Gotham Pro';
@@ -1308,8 +1315,10 @@
       font-weight: 400;
       font-size: 18px;
     }
+    &__price {
+      max-width: 140px;
+    }
   }
-
   &__numbers-box {
     display: flex;
     justify-content: start;
@@ -1318,6 +1327,18 @@
     flex-wrap: wrap;
     max-width: 100%;
     width: 100%;
+    padding-top: 20px;
+  }
+  &__numbers-title {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+  }
+  &__mobileBg {
+    display: none;
   }
   &__numbers-item {
     display: flex;
@@ -1495,6 +1516,9 @@
     box-shadow: 0px 54px 45px -42px rgba(49, 45, 79, 0.1);
     border-radius: 20px;
     padding: 50px 70px;
+    flex: none;
+    max-width: 400px;
+    width: 100%;
   }
   &__field-title {
     font-family: 'Gotham Pro';
@@ -1585,7 +1609,7 @@
   left: 0;
   bottom: 0;
   background-color: #fff;
-  z-index: 150;
+  z-index: 300;
   transform: translateX(-200%);
   transition: all 0.3s;
   &.active {

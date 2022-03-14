@@ -65,9 +65,6 @@ $(function () {
       },
     ],
   });
-  $('.scope__items').on('init', function (event, slick) {
-    console.log(event);
-  });
   $('.scope__items').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -75,6 +72,31 @@ $(function () {
     nextArrow: $('.scope__arrows-arrow--next'),
     centerMode: false,
     variableWidth: true,
+    dots: true,
+    appendDots: $('.scope__dots'),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          variableWidth: false,
+        },
+      },
+      {
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: false,
+        },
+      },
+      {
+        breakpoint: 570,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+        },
+      },
+    ],
   });
   $('.reviews__slider').slick({
     slidesToShow: 3,
@@ -154,7 +176,6 @@ $(function () {
     }
 
     containerCoords = $container.offset().left;
-    console.log(containerCoords);
 
     $('.features__inner').css({ marginLeft: `${containerCoords + 15}px` });
     $('.features__title').css({ marginRight: `${containerCoords + 115}px` });
