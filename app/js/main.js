@@ -224,4 +224,22 @@ $(function () {
     $('[data-search="wrapper"]').addClass('active');
   });
   $('.phone-select').niceSelect();
+  
+  function customInput(id=1) {
+    const $item = $(`[data-input="${id}"]`)
+    $item.focus()
+    
+    if ($item) {
+      $item.on('input', function(e) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        
+        if ($(this).val().length >= 1) {
+          customInput(id + 1)
+        } else {
+          customInput(id - 1)
+        }
+      })
+    }
+  }
+  customInput(1)
 });

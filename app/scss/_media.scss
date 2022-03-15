@@ -869,10 +869,21 @@
       margin-top: -200px;
       padding: 40px 30px;
     }
-    &__select-number {
+    &__select-number,
+    .phone-select {
       font-size: 21px;
       line-height: 20px;
       margin-bottom: 40px;
+      [data-input="wrapper"] {
+        display: flex;
+        column-gap: 8px;
+        input {
+          border: none;
+          width: 21px;
+          height: 36px;
+          border-radius: 10px;
+        }
+      }
     }
     &__select-button {
       max-width: 100%;
