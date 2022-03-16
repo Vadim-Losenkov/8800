@@ -476,6 +476,12 @@
     &__phone {
       font-size: 28px;
       line-height: 27px;
+      &.bad-num {
+        transform: translateY(120px);
+      }
+    }
+    &__phone--old {
+      margin-left: 70px;
     }
   }
 

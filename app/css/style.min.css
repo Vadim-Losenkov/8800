@@ -3749,6 +3749,13 @@ img.mfp-img {
     font-size: 28px;
     line-height: 27px;
   }
+  .number__phone.bad-num {
+    -webkit-transform: translateY(120px);
+            transform: translateY(120px);
+  }
+  .number__phone--old {
+    margin-left: 70px;
+  }
   .analytics__inner {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
