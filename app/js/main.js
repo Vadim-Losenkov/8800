@@ -118,28 +118,29 @@ $(function () {
   });
 
   function animateNumber() {
+    const k = 1;
     const $oldNumber = $('.number__phone--old');
     $oldNumber.addClass('old').removeClass('bad-num');
 
     setTimeout(() => {
       $oldNumber.addClass('crossed-out');
-    }, 300);
+    }, 300 * k);
 
     $('.number__phone--8800').removeClass('bad-num old');
     $('.number-image-black, .number-mobile-image-black').css({ opacity: 0 });
     $('.number-image-1, .number-mobile-image-1').css({ opacity: 1 });
     setTimeout(() => {
       $('.number__info-title').addClass('animated');
-    }, 600);
+    }, 600 * k);
     setTimeout(() => {
       $('.number__info-text').addClass('animated');
-    }, 750);
+    }, 750 * k);
     setTimeout(() => {
       $('.number-image-2, .number-mobile-image-2').css({ opacity: 1 });
-    }, 900);
+    }, 900 * k);
     setTimeout(() => {
       $('.number-image-3, .number-mobile-image-3').css({ opacity: 1 });
-    }, 1100);
+    }, 1100 * k);
   }
 
   function useAnimation() {
@@ -164,7 +165,7 @@ $(function () {
       if (position - numberPosition > 300) {
         setTimeout(() => {
           animateNumber();
-        }, 200);
+        }, 1200);
       }
     }
   }
@@ -224,22 +225,24 @@ $(function () {
     $('[data-search="wrapper"]').addClass('active');
   });
   $('.phone-select').niceSelect();
-  
-  function customInput(id=1) {
-    const $item = $(`[data-input="${id}"]`)
-    $item.focus()
-    
+
+  function customInput(id = 1) {
+    const $item = $(`[data-input="${id}"]`);
+    if (id !== 1) {
+      $item.focus();
+    }
+
     if ($item) {
-      $item.on('input', function(e) {
+      $item.on('input', function (e) {
         this.value = this.value.replace(/[^0-9]/g, '');
-        
+
         if ($(this).val().length >= 1) {
-          customInput(id + 1)
+          customInput(id + 1);
         } else {
-          customInput(id - 1)
+          customInput(id - 1);
         }
-      })
+      });
     }
   }
-  customInput(1)
+  customInput(1);
 });

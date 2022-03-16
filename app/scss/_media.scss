@@ -871,12 +871,20 @@
     }
     &__select-number,
     .phone-select {
-      font-size: 21px;
+      font-size: 18px;
       line-height: 20px;
-      margin-bottom: 40px;
-      [data-input="wrapper"] {
+      width: 80px;
+      padding: 9px;
+      column-gap: 1px;
+      padding-right: 25px;
+      height: 40px;
+      &::after {
+        right: 0;
+        top: 70%;
+      }
+      [data-input='wrapper'] {
         display: flex;
-        column-gap: 8px;
+        column-gap: 6px;
         input {
           border: none;
           width: 21px;
@@ -956,6 +964,52 @@
       max-width: 170px;
     }
   }
+  .benefits {
+    padding: 70px 0;
+    margin-bottom: 0;
+  }
+  .number {
+    margin: 20px 0;
+  }
+  .features {
+    margin-bottom: 0;
+  }
+  .analytics {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 79px;
+  }
+  .services {
+    padding-bottom: 0;
+    margin-bottom: 80px;
+  }
+  .services__title {
+    margin-bottom: 20px;
+  }
+  .tariff {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 80px;
+    &__title {
+      font-size: 28px;
+      line-height: 27px;
+      margin-bottom: 40px;
+    }
+  }
+  .faq {
+    padding-bottom: 0;
+  }
+  .choise {
+    padding-bottom: 0;
+    margin-bottom: 80px;
+  }
+  .questions {
+    margin-bottom: 50px;
+  }
+  .form {
+    padding: 50px 0;
+  }
 }
 @media (max-width: 560px) {
   .top {
@@ -1026,5 +1080,10 @@
       font-size: 16px;
       line-height: 120%;
     }
+  }
+  .form__items {
+    column-gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 }

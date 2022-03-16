@@ -29,6 +29,12 @@ body {
   font-style: normal;
 }
 
+input {
+  &:focus {
+    outline: 2px solid $red;
+  }
+}
+
 .title {
   font-family: 'Gotham Pro';
   font-weight: bold;
