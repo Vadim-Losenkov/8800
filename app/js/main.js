@@ -26,6 +26,16 @@ $(function () {
       $('[data-banner-bottom="wrapper"]').css({ display: 'none' });
     }, 300);
   });
+  $('.header__menu-link.home').hover(
+    function () {
+      $('.banner-top').addClass('open');
+    },
+    function () {
+      setTimeout(() => {
+        $('.banner-top').removeClass('open');
+      }, 100);
+    },
+  );
   $('.slider__box').slick({
     vertical: true,
     arrows: false,
@@ -165,7 +175,7 @@ $(function () {
       if (position - numberPosition > 300) {
         setTimeout(() => {
           animateNumber();
-        }, 1200);
+        }, 2000);
       }
     }
   }

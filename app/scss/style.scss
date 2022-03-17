@@ -879,9 +879,9 @@
     margin: 0 10px;
     &.active {
       position: relative;
-      .tariff__item-button {
-        background: $red;
-      }
+      // .tariff__item-button {
+      //   background: $red;
+      // }
 
       &::before {
         content: '';
@@ -893,6 +893,14 @@
         background-image: url('../images/icons/bookmark.svg');
         background-repeat: no-repeat;
         background-size: cover;
+      }
+    }
+    .tariff__item-button {
+      transition: all 0.3s;
+    }
+    &:hover {
+      .tariff__item-button {
+        background: $red;
       }
     }
   }
@@ -1302,8 +1310,8 @@
         width: 30px;
         height: 54px;
         border-radius: 10px;
-        border: 1px solid  #eee !important;
-        box-shadow: 1px 1px 10px rgba(#000, .05);
+        border: 1px solid #eee !important;
+        box-shadow: 1px 1px 10px rgba(#000, 0.05);
       }
     }
     .phone-select {
@@ -1726,11 +1734,20 @@
 }
 
 .banner-top {
-  position: absolute;
-  top: 180px;
+  &.open {
+    opacity: 1;
+    transition: all 0.15s;
+    transform: translateY(80px);
+  }
+  transition: all 0.4s;
+  position: fixed;
+  padding-top: 180px;
   left: 0;
   right: 0;
   z-index: 50;
+  padding-top: 100px;
+  opacity: 1;
+  transform: translateY(-200px);
   &__button {
     padding: 10px 32px;
     background: $red;
@@ -1765,10 +1782,15 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(80px);
+  }
 }
 
 .banner-bottom {
-  position: absolute;
+  position: fixed;
   bottom: 18px;
   left: 0;
   right: 0;
@@ -1780,6 +1802,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 2px 2px 20px rgba(#000, 0.05);
   }
   &__title {
     font-family: 'Gotham Pro';
