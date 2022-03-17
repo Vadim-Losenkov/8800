@@ -1299,10 +1299,11 @@
       display: flex;
       column-gap: 10px;
       input {
-        border: none;
         width: 30px;
         height: 54px;
         border-radius: 10px;
+        border: 1px solid  #eee !important;
+        box-shadow: 1px 1px 10px rgba(#000, .05);
       }
     }
     .phone-select {
