@@ -1092,4 +1092,15 @@
     flex-wrap: nowrap;
     overflow-x: auto;
   }
+  .choise {
+    &__select-title {
+      margin-bottom: 25px;
+    }
+    &__select-number {
+      margin-bottom: 25px;
+    }
+    &__button {
+      margin-bottom: 20px;
+    }
+  }
 }

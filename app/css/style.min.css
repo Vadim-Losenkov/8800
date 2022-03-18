@@ -2566,6 +2566,7 @@ img.mfp-img {
   border: 1px solid #eee !important;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .choise__select-number .phone-select,
@@ -4392,6 +4393,15 @@ img.mfp-img {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-x: auto;
+  }
+  .choise__select-title {
+    margin-bottom: 25px;
+  }
+  .choise__select-number {
+    margin-bottom: 25px;
+  }
+  .choise__button {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.min.css.map */
