@@ -26,8 +26,10 @@ $(function () {
       },
       midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
-    $('.text-popup__close').on('click', () => $('.open-popup').magnificPopup('close'));
-
+    $('[data-popup="close"]').on('click', () => $('.open-popup').magnificPopup('close'));
+    $('.popup-request__checkbox').on('click', () => {
+      $('.popup-request__checkbox-button').toggleClass('active');
+    });
     $('[data-header="toggler"]').on('click', function (e) {
       $('.header-mobile').toggleClass('open');
       $('[data-search="field"]')[0].value = '';
@@ -43,8 +45,7 @@ $(function () {
         $('[data-banner-bottom="wrapper"]').css({ display: 'none' });
       }, 300);
     });
-    // $('[data-form="number"]').mask('8(888) 888-8888')
-    $('[data-form="number"]').mask("+7 (999) 999-9999")
+    $('[data-form="number"]').mask('+7 (999) 999-9999');
     $('.header__menu-link.home').hover(
       function () {
         $('.banner-top').addClass('open');

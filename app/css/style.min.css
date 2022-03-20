@@ -925,6 +925,109 @@ img.mfp-img {
   top: 40px;
 }
 
+.popup-request {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 520px;
+  padding: 60px 70px;
+  padding-right: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-height: 90vh;
+}
+
+.popup-request .mfp-close {
+  display: none !important;
+}
+
+.popup-request__title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.popup-request__close {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.popup-request__input {
+  display: block;
+  width: 100%;
+  border: 3px solid #dddddd;
+  border-radius: 7px;
+  padding: 18px 27px;
+  font-family: 'FuturaDemiC';
+  color: #3b3643;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.popup-request__input::-webkit-input-placeholder {
+  color: #777777;
+}
+
+.popup-request__input:-ms-input-placeholder {
+  color: #777777;
+}
+
+.popup-request__input::-ms-input-placeholder {
+  color: #777777;
+}
+
+.popup-request__input::placeholder {
+  color: #777777;
+}
+
+.popup-request__button {
+  background: #3b3643;
+  border-radius: 7px;
+  padding: 20px;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-request__checkbox {
+  font-family: 'FuturaBookC';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #888888;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.popup-request__checkbox-button {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #eddbdf;
+  border-radius: 2px;
+  left: 0;
+  top: 3px;
+}
+
+.popup-request__checkbox-button svg {
+  opacity: 0;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.popup-request__checkbox-button.active svg {
+  opacity: 1;
+}
+
 .header {
   -webkit-box-shadow: 0px 4px 30px 0px #0000000d;
           box-shadow: 0px 4px 30px 0px #0000000d;
@@ -3160,6 +3263,7 @@ img.mfp-img {
   transition: all 0.4s;
   position: fixed;
   padding-top: 180px;
+  padding-bottom: 100px;
   left: 0;
   right: 0;
   z-index: 50;
@@ -4402,6 +4506,29 @@ img.mfp-img {
   }
   .choise__button {
     margin-bottom: 20px;
+  }
+  .popup-request {
+    padding: 32px 28px;
+  }
+  .popup-request__close {
+    right: 10px;
+    top: 10px;
+  }
+  .popup-request__title {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+  .popup-request__input {
+    padding: 18px 23px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .popup-request__button {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .popup-request__checkbox {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.min.css.map */

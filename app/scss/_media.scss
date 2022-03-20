@@ -1103,4 +1103,27 @@
       margin-bottom: 20px;
     }
   }
+  .popup-request {
+    padding: 32px 28px;
+    &__close {
+      right: 10px;
+      top: 10px;
+    }
+    &__title {
+      font-size: 22px;
+      margin-bottom: 22px;
+    }
+    &__input {
+      padding: 18px 23px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__button {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__checkbox {
+      font-size: 14px;
+    }
+  }
 }

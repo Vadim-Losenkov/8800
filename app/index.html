@@ -137,7 +137,9 @@
             <a href="#" class="banner-top__item">Доп.сервисы</a>
             <a href="#" class="banner-top__item">Кейсы</a>
           </div>
-          <a href="#" class="banner-top__button">Подключить за 15 минут </a>
+          <a href="#popup-request" data-effect="mfp-zoom-in" class="banner-top__button open-popup"
+            >Подключить за 15 минут
+          </a>
         </div>
       </div>
     </div>
@@ -1367,10 +1369,9 @@
               <div class="brands__item"><img src="images/content/brands/item-5.png" alt="" /></div>
               <div class="brands__item"><img src="images/content/brands/item-6.png" alt="" /></div>
               <div class="brands__item"><img src="images/content/brands/item-7.png" alt="" /></div>
-              <div class="brands__item"><img src="images/content/brands/item-8.png" alt="" /></div>
+              <div class="brands__item"><img src="images/global/image-2-bg.png" alt="" /></div>
               <div class="brands__item"><img src="images/content/brands/item-9.png" alt="" /></div>
               <div class="brands__item"><img src="images/content/brands/item-10.png" alt="" /></div>
-              <div class="brands__item"><img src="images/content/i.svg" alt="" /></div>
             </div>
           </div>
         </div>
@@ -1906,7 +1907,7 @@
 
     <div class="popups">
       <div id="popup-text" class="text-popup mfp-with-anim mfp-hide">
-        <div class="text-popup__close">
+        <div class="text-popup__close" data-popup="close">
           <svg
             width="30"
             height="30"
@@ -1971,6 +1972,51 @@
           massa tincidunt nunc pulvinar. Adipiscing bibendum est ultricies integer quis auctor elit
           sed.
         </p>
+      </div>
+      <div id="popup-request" class="popup-request mfp-with-anim mfp-hide">
+        <div class="popup-request__close" data-popup="close">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.5 7.5L22.5 22.5M7.5 22.5L22.5 7.5L7.5 22.5Z"
+              stroke="#3B3643"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h6 class="popup-request__title title">Оставьте заявку</h6>
+        <input type="text" placeholder="Ваше имя" class="popup-request__input" />
+        <input
+          type="text"
+          placeholder="Номер телефона"
+          data-form="number"
+          class="popup-request__input"
+        />
+        <button class="popup-request__button">Оставить заявку</button>
+        <div class="popup-request__checkbox">
+          <div class="popup-request__checkbox-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.7143 11.9499H1.28571C0.575625 11.9499 0 11.3791 0 10.6749V1.32493C0 0.620755 0.575625 0.0499268 1.28571 0.0499268H10.7143C11.4244 0.0499268 12 0.620755 12 1.32493V10.6749C12 11.3791 11.4244 11.9499 10.7143 11.9499ZM5.23163 9.34523L10.1602 4.45773C10.3276 4.29177 10.3276 4.02267 10.1602 3.8567L9.55412 3.25568C9.38676 3.08971 9.11539 3.08969 8.94801 3.25568L4.92857 7.24159L3.05199 5.38065C2.88463 5.21469 2.61327 5.21469 2.44588 5.38065L1.8398 5.98168C1.67245 6.14764 1.67245 6.41675 1.8398 6.58271L4.62552 9.34521C4.7929 9.51122 5.06424 9.51122 5.23163 9.34523Z"
+                fill="#E73756"
+              />
+            </svg>
+          </div>
+          Нажимая на кнопку “Подключиться”, я даю согласие на обработку персональных данных
+        </div>
       </div>
     </div>
 
