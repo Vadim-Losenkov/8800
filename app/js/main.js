@@ -43,6 +43,8 @@ $(function () {
         $('[data-banner-bottom="wrapper"]').css({ display: 'none' });
       }, 300);
     });
+    // $('[data-form="number"]').mask('8(888) 888-8888')
+    $('[data-form="number"]').mask("+7 (999) 999-9999")
     $('.header__menu-link.home').hover(
       function () {
         $('.banner-top').addClass('open');
@@ -59,6 +61,7 @@ $(function () {
       slidesToScroll: 1,
       prevArrow: $('.tariff__arrows-arrow--prev'),
       nextArrow: $('.tariff__arrows-arrow--next'),
+      autoplay: 2000,
       responsive: [
         {
           breakpoint: 1200,
@@ -83,6 +86,7 @@ $(function () {
     $('.scope__items').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
+      autoplay: 2000,
       prevArrow: $('.scope__arrows-arrow--prev'),
       nextArrow: $('.scope__arrows-arrow--next'),
       centerMode: false,
@@ -116,12 +120,14 @@ $(function () {
     $('.reviews__slider').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
+      autoplay: 2000,
       prevArrow: $('.reviews__arrows-arrow--prev'),
       nextArrow: $('.reviews__arrows-arrow--next'),
       centerMode: false,
       variableWidth: true,
     });
     $('.footer__slider').slick({
+      autoplay: 2000,
       prevArrow: $('.footer__slider-arrow--left'),
       nextArrow: $('.footer__slider-arrow--right'),
       variableWidth: true,
