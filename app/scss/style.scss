@@ -271,6 +271,7 @@
     @extend %fbook;
     font-size: 22px;
     line-height: 25px;
+    margin-bottom: 10px;
   }
 
   &__info {
@@ -285,7 +286,7 @@
     padding: 66px 54px;
     padding-bottom: 75px;
     display: flex !important;
-    min-height: 305px;
+    min-height: 340px;
     align-items: flex-start;
     column-gap: 14px;
 
