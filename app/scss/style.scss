@@ -735,12 +735,11 @@
 }
 
 .services {
-  padding-bottom: 52px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/global/services-bg.jpg');
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   &__mobileBg {
     display: none;
   }
@@ -789,6 +788,44 @@
         z-index: 10;
         opacity: 1;
       }
+    }
+  }
+}
+
+.services-info {
+  margin-bottom: 150px;
+  &__item-title {
+    font-family: 'FuturaDemiC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #3b3643;
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+    margin-bottom: 20px;
+  }
+  &__item-marked {
+    font-family: 'FuturaBookC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: #3b3643;
+    position: relative;
+    padding-left: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY('-50%');
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background-color: #3b3643;
+      border-radius: 50%;
     }
   }
 }
@@ -1828,4 +1865,4 @@
   }
 }
 
-// @import 'media';
+@import 'media';

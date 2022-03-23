@@ -28,7 +28,6 @@ body {
   font-weight: normal;
   font-style: normal;
   // min-width: 320px;
-  min-width: 1920px;
 }
 
 input {
@@ -48,7 +47,8 @@ input {
   }
 }
 
-.open-popup, .black-button {
+.open-popup,
+.black-button {
   background-color: #3b3643;
   transition: all 0.3s;
   &:hover {
