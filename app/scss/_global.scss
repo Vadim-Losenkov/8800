@@ -45,3 +45,11 @@ input {
     color: $red;
   }
 }
+
+.open-popup, .black-button {
+  background-color: #3b3643;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #100f13;
+  }
+}
