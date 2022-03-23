@@ -1,4 +1,15 @@
 $(function () {
+  $('[data-button="toSecton"]').on('click', function (e) {
+    e.preventDefault()
+    const sectionID = $(this).attr('href')
+
+    $('html, body').animate({
+      scrollTop: $(sectionID).offset().top
+    }, {
+      duration: 500,
+    });
+  })
+  
   $('.slider__box').slick({
     vertical: true,
     arrows: false,
