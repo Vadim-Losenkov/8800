@@ -95,6 +95,16 @@ $(function () {
         },
       ],
     });
+    if (window.innerWidth <= 768) {
+      $('.users__box').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: 2000,
+        centerMode: false,
+        variableWidth: true,
+        arrows: false
+      })
+    }
     $('.scope__items').slick({
       slidesToShow: 3,
       slidesToScroll: 1,

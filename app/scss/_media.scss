@@ -613,6 +613,16 @@
   }
 
   .users {
+    overflow: auto !important;
+    &__box {
+      display: block;
+      column-gap: 0;
+      padding: 20px 0;
+    }
+    &__item {
+      margin: 0 10px;
+      max-width: 210px;
+    }
     &__item-image {
       width: 200px;
       height: 265px;
@@ -623,6 +633,7 @@
       line-height: 135%;
     }
   }
+  
 
   .services {
     &__info {
@@ -893,7 +904,7 @@
         column-gap: 6px;
         input {
           border: none;
-          width: 21px;
+          width: 24px;
           height: 36px;
           border-radius: 10px;
         }

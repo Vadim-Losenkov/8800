@@ -25,7 +25,7 @@
   }
   &__contacts {
     display: flex;
-    column-gap: 40px;
+    margin: 0 20px;
     align-items: center;
   }
   &__contacts-item {
@@ -67,7 +67,6 @@
 
   &__links {
     display: flex;
-    column-gap: 40px;
   }
   &__links-link {
     @extend %fbook;
@@ -75,6 +74,7 @@
     font-size: 16px;
     line-height: 18px;
     color: #3b3643;
+    margin: 0 20px;
     &.icon {
       &::before {
         content: '';
@@ -104,11 +104,11 @@
   &__menu {
     display: flex;
     align-items: center;
-    column-gap: 40px;
   }
   &__menu-link {
     padding: 24px 0;
     position: relative;
+    margin: 0 20px;
     &.active::after {
       content: '';
       position: absolute;
@@ -189,7 +189,7 @@
     background-color: #3b3643;
     border-radius: 7px;
     padding: 19px 32px;
-
+    margin: 0 17px;
     @extend %fdemi;
     font-size: 18px;
     line-height: 21px;
@@ -204,7 +204,7 @@
     color: #3b3643;
     padding-left: 34px;
     position: relative;
-
+    margin: 0 17px;
     &::before {
       content: '';
       position: absolute;
@@ -221,7 +221,6 @@
   }
   &__benefits {
     display: flex;
-    column-gap: 40px;
   }
   &__benefits-item {
     padding: 40px 31px;
@@ -230,6 +229,7 @@
     box-shadow: 10px 25px 125px -20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(30px);
     border-radius: 10px;
+    margin: 0 20px;
   }
   &__benefits-title {
     font-family: Gotham Pro;
@@ -757,13 +757,24 @@
   &__item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     column-gap: 8px;
     margin-bottom: 60px;
+    &:hover {
+      .services__item-text {
+        z-index: 10;
+        opacity: 1;
+      }
+    }
   }
   &__item-title {
     white-space: nowrap;
     margin-left: 9px;
-    display: inline-block;
+    display: inline;
+    img {
+      display: inline;
+      margin-left: 10px;
+    }
   }
   &__item-text {
     transition: all 0.3s;
@@ -1674,6 +1685,7 @@
   }
   &__arrow {
     width: 24px;
+    cursor: pointer;
   }
   &__slider-wrapper {
     display: flex;
@@ -1865,4 +1877,4 @@
   }
 }
 
-@import 'media';
+// @import 'media';
