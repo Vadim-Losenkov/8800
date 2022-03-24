@@ -215,9 +215,9 @@
     &__logo-wrapper {
       display: flex;
       align-items: center;
-      column-gap: 13px;
       img {
         width: 50px;
+        margin-right: 13px;
       }
     }
     &__content {
@@ -633,7 +633,6 @@
       line-height: 135%;
     }
   }
-  
 
   .services {
     &__info {
@@ -901,12 +900,13 @@
       }
       [data-input='wrapper'] {
         display: flex;
-        column-gap: 6px;
+        column-gap: 0;
         input {
           border: none;
           width: 24px;
           height: 36px;
           border-radius: 10px;
+          margin-right: 6px;
         }
       }
     }
@@ -1099,9 +1099,12 @@
     }
   }
   .form__items {
-    column-gap: 20px;
     flex-wrap: nowrap;
     overflow-x: auto;
+    column-gap: 0;
+  }
+  .form__item {
+    margin-right: 20px;
   }
   .choise {
     &__select-title {
