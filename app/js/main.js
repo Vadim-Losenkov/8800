@@ -154,10 +154,9 @@ $(function () {
       nextArrow: $('.footer__slider-arrow--right'),
       variableWidth: true,
     });
-    $('.number__window').on('click', function (e) {
-      animateNumber();
-    });
-
+    
+    let iCount = 1
+    
     function animateNumber() {
       const k = 1;
       const $oldNumber = $('.number__phone--old');
@@ -167,14 +166,16 @@ $(function () {
         $oldNumber.addClass('crossed-out');
       }, 300 * k);
 
-      $('.number__phone--8800').removeClass('bad-num old');
+      $('.number__phone--8800').removeClass('bad-num old').css({opacity: 1});
       $('.number-image-black, .number-mobile-image-black').css({ opacity: 0 });
       $('.number-image-1, .number-mobile-image-1').css({ opacity: 1 });
       setTimeout(() => {
         $('.number__info-title').addClass('animated');
+        $('.number__info-title--black').removeClass('animated');
       }, 600 * k);
       setTimeout(() => {
         $('.number__info-text').addClass('animated');
+        $('.number__info-text--black').removeClass('animated');
       }, 750 * k);
       setTimeout(() => {
         $('.number-image-2, .number-mobile-image-2').css({ opacity: 1 });
@@ -183,6 +184,48 @@ $(function () {
         $('.number-image-3, .number-mobile-image-3').css({ opacity: 1 });
       }, 1100 * k);
     }
+    function reanimateNumber() {
+      const k = 1;
+      const $oldNumber = $('.number__phone--old');
+      $oldNumber.removeClass('old').addClass('bad-num');
+      $('.number__phone--8800').css({opacity: 0})
+        $('.number__phone--8800').removeClass('bad-num old');
+
+      setTimeout(() => {
+        $oldNumber.removeClass('crossed-out');
+        $('.number-image-1, .number-mobile-image-1').css({ opacity: 0 });
+      }, 300 * k);
+
+      setTimeout(() => {
+        $('.number__info-title--black').addClass('animated');
+        $('.number__info-text--black').addClass('animated');
+      }, 900 * k);
+      setTimeout(() => {
+        $('.number__info-title').removeClass('animated');
+        $('.number__info-text').removeClass('animated');
+        $('.number-image-black, .number-mobile-image-black').css({ opacity: 1 });
+      }, 750 * k);
+      setTimeout(() => {
+        $('.number-image-3, .number-mobile-image-3').css({ opacity: 0 });
+      }, 600 * k);
+      setTimeout(() => {
+        $('.number-image-2, .number-mobile-image-2').css({ opacity: 0 });
+      }, 300 * k);
+    }
+    function animation() {
+      if (iCount % 2 !== 0) {
+        animateNumber()
+      // } else if (iCount >= 2) {
+      //   return
+      } else {
+        reanimateNumber()
+      }
+    }
+    
+    setInterval(function() {
+      animation()
+      iCount++
+    }, 3000);
 
     function useAnimation() {
       let numberPosition = $('#number').offset().top;
@@ -205,7 +248,7 @@ $(function () {
         const position = Math.round(pageYOffset) + windowHeight;
         if (position - numberPosition > 300) {
           setTimeout(() => {
-            animateNumber();
+            // animateNumber();
           }, 2000);
         }
       }
