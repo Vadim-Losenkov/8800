@@ -25,7 +25,7 @@
   }
   &__contacts {
     display: flex;
-    column-gap: 40px;
+    margin: 0 20px;
     align-items: center;
   }
   &__contacts-item {
@@ -67,7 +67,6 @@
 
   &__links {
     display: flex;
-    column-gap: 40px;
   }
   &__links-link {
     @extend %fbook;
@@ -75,6 +74,7 @@
     font-size: 16px;
     line-height: 18px;
     color: #3b3643;
+    margin: 0 20px;
     &.icon {
       &::before {
         content: '';
@@ -104,11 +104,11 @@
   &__menu {
     display: flex;
     align-items: center;
-    column-gap: 40px;
   }
   &__menu-link {
     padding: 24px 0;
     position: relative;
+    margin: 0 20px;
     &.active::after {
       content: '';
       position: absolute;
@@ -182,19 +182,19 @@
   &__buttons {
     display: flex;
     align-items: center;
-    column-gap: 35px;
     margin-bottom: 70px;
   }
   &__buttons-btn {
     background-color: #3b3643;
     border-radius: 7px;
     padding: 19px 32px;
-
+    margin: 0 17px;
     @extend %fdemi;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #ffffff;
+    margin-right: 35px;
   }
   &__buttons-link {
     @extend %fbook;
@@ -204,7 +204,7 @@
     color: #3b3643;
     padding-left: 34px;
     position: relative;
-
+    margin: 0 17px;
     &::before {
       content: '';
       position: absolute;
@@ -221,7 +221,6 @@
   }
   &__benefits {
     display: flex;
-    column-gap: 40px;
   }
   &__benefits-item {
     padding: 40px 31px;
@@ -230,6 +229,7 @@
     box-shadow: 10px 25px 125px -20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(30px);
     border-radius: 10px;
+    margin: 0 20px;
   }
   &__benefits-title {
     font-family: Gotham Pro;
@@ -252,7 +252,6 @@
     color: #3b3643;
   }
 }
-
 .slider {
   margin-bottom: 175px;
   &__inner {
@@ -420,7 +419,7 @@
     backdrop-filter: blur(30px);
     border-radius: 20px;
     position: relative;
-
+    transition: all .3s;
     &::before {
       content: '';
       position: absolute;
@@ -442,9 +441,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    transition: all .3s;
   }
   .bad-num {
     transform: translateY(165px);
+    transition: all .3s;
   }
   &__phone {
     transition: all 0.3s;
@@ -508,6 +509,11 @@
       transform: translateX(0);
       opacity: 1;
     }
+    &--black {
+      margin-top: -50px;
+      color: #3b3643;
+    }
+    
   }
   &__info-text {
     font-family: Gotham Pro;
@@ -524,6 +530,9 @@
     &.animated {
       transform: translateX(0);
       opacity: 1;
+    }
+    &--black {
+      // margin-top: -50px;
     }
   }
   &__images {
@@ -635,9 +644,11 @@
   &__slider-arrow {
     cursor: pointer;
   }
+  [slider-arrow='left'] {
+    margin-right: 40px;
+  }
   &__slider-arrows {
     display: flex;
-    column-gap: 40px;
     position: absolute;
     bottom: -35px;
     left: 53px;
@@ -754,16 +765,31 @@
     width: 100%;
     column-gap: 50px;
   }
+  &__item-icon {
+    flex: none;
+  }
   &__item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     column-gap: 8px;
     margin-bottom: 60px;
+    &:hover {
+      .services__item-text {
+        z-index: 10;
+        opacity: 1;
+      }
+    }
   }
   &__item-title {
     white-space: nowrap;
     margin-left: 9px;
-    display: inline-block;
+    display: inline;
+    img {
+      display: inline;
+      margin-left: 10px;
+      margin-bottom: -4px;
+    }
   }
   &__item-text {
     transition: all 0.3s;
@@ -803,8 +829,11 @@
     color: #3b3643;
     display: flex;
     align-items: center;
-    column-gap: 17px;
     margin-bottom: 20px;
+
+    svg {
+      margin-right: 17px;
+    }
   }
   &__item-marked {
     font-family: 'FuturaBookC';
@@ -1051,10 +1080,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    column-gap: 50px;
   }
   &__item {
     margin-bottom: 50px;
+    margin-right: 50px;
     filter: grayscale(1);
     transition: all 0.3s;
 
@@ -1430,7 +1459,6 @@
   &__numbers-item {
     display: flex;
     align-items: center;
-    column-gap: 17px;
     font-family: 'FuturaBookC';
     font-style: normal;
     font-weight: 400;
@@ -1438,7 +1466,7 @@
     line-height: 25px;
     color: #3b3643;
     cursor: pointer;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     &.active {
       color: $red;
@@ -1463,7 +1491,9 @@
     background: #eddbdf;
     border-radius: 2px;
     width: 21px;
+
     height: 21px;
+    margin-right: 17px;
   }
   &__button {
     padding: 20px 60px;
@@ -1503,6 +1533,7 @@
     cursor: pointer;
     img {
       transition: 0.3s;
+      margin-right: 10px;
     }
     &.active {
       img {
@@ -1512,7 +1543,6 @@
   }
   &__item-title {
     display: flex;
-    column-gap: 10px;
     align-items: center;
     font-family: 'Gotham Pro';
     font-style: normal;
@@ -1674,6 +1704,7 @@
   }
   &__arrow {
     width: 24px;
+    cursor: pointer;
   }
   &__slider-wrapper {
     display: flex;

@@ -215,9 +215,9 @@
     &__logo-wrapper {
       display: flex;
       align-items: center;
-      column-gap: 13px;
       img {
         width: 50px;
+        margin-right: 13px;
       }
     }
     &__content {
@@ -476,12 +476,28 @@
     &__phone {
       font-size: 28px;
       line-height: 27px;
+      transition: all .3s;
       &.bad-num {
         transform: translateY(120px);
       }
     }
     &__phone--old {
       margin-left: 70px;
+      transition: all .3s;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        width: 0;
+        transform: translateY(-55%);
+        height: 4px;
+        background-color: #3b3643;
+        transition: all 0.3s;
+        // right: -17px;
+        width: 100%;
+        transition: all 0.3s;
+      }
     }
   }
 
@@ -613,6 +629,16 @@
   }
 
   .users {
+    overflow: auto !important;
+    &__box {
+      display: block;
+      column-gap: 0;
+      padding: 20px 0;
+    }
+    &__item {
+      margin: 0 10px;
+      max-width: 210px;
+    }
     &__item-image {
       width: 200px;
       height: 265px;
@@ -890,12 +916,13 @@
       }
       [data-input='wrapper'] {
         display: flex;
-        column-gap: 6px;
+        column-gap: 0;
         input {
           border: none;
-          width: 21px;
+          width: 24px;
           height: 36px;
           border-radius: 10px;
+          margin-right: 6px;
         }
       }
     }
@@ -1064,12 +1091,14 @@
       margin-bottom: 30px;
     }
     &__slider-title {
-      font-size: 16px;
-      line-height: 15px;
+      font-size: 16px !important;
+      line-height: 18px !important;
+      -webkit-text-size-adjust: 100% !important;
     }
     &__slider-text {
-      font-size: 16px;
-      line-height: 15px;
+      font-size: 16px !important;
+      line-height: 18px !important;
+      -webkit-text-size-adjust: 100% !important;
     }
   }
   .analytics__text {
@@ -1088,9 +1117,12 @@
     }
   }
   .form__items {
-    column-gap: 20px;
     flex-wrap: nowrap;
     overflow-x: auto;
+    column-gap: 0;
+  }
+  .form__item {
+    margin-right: 20px;
   }
   .choise {
     &__select-title {
